@@ -6,10 +6,13 @@ const app = express();
 
 const { User } = require("./model.js");
 const router = express.Router();
-var uri = "mongodb+srv://mogodeneme:mogodeneme@cluster0.1z9ayxv.mongodb.net/sample_geospatial?retryWrites=true&w=majority"
 
 
-mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true });
+const mySecret = process.env['DB_CONNECT']
+
+
+
+mongoose.connect(mySecret, { useUnifiedTopology: true, useNewUrlParser: true });
 
 const connection = mongoose.connection;
 

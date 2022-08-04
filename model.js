@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema({
 	orderFromSun: Number,
   hasRing: Boolean
   
-},  {collection: 'shipwrecks'});
+},  {collection: 'planets'});
 	
 
 // Creating model objects
