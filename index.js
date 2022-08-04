@@ -22,7 +22,7 @@ connection.once("open", function() {
 
 app.use(express.json())
 app.use(bodyparser.json())
-app.use("/f", router);
+app.use("/", router);
 router.get('/', (req,res)=>{
     User.find({}).then(data => {
                 res.send(data)
