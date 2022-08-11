@@ -31,7 +31,7 @@ app.use(express.json())
 app.use(bodyparser.json())
 app.use("/", router);
 
-router.get('/', cors(corsOptions), (req,res)=>{
+router.get('/', (req,res)=>{
     User.find({}).then(data => {
                 res.json(data)
                // console.log(data);
